@@ -9,6 +9,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
+/**
+ * Controller class for Pane generated from FXML which represents layout for
+ * calculator application.
+ *
+ * @author Boris Generalic
+ *
+ */
 public class CalculatorController {
 
 	@FXML
@@ -61,39 +68,55 @@ public class CalculatorController {
 
 	@FXML
 	public void initialize() {
-		CalculatorBackend calc = new CalculatorBackend();
+		final CalculatorBackend calc = new CalculatorBackend();
+		bindButtons(calc);
+		bindDisplays(calc);
+	}
 
-		DigitButton b0 = new DigitButton(0);
+	/**
+	 * Binds action to each button which will be performed when button is clicked.
+	 *
+	 * @param calc	{@link CalculatorBackend}
+	 */
+	private void bindButtons(final CalculatorBackend calc) {
+		final DigitButton b0 = new DigitButton(0);
 		digitButton0.setOnAction(e -> calc.press(b0));
-		DigitButton b1 = new DigitButton(1);
+		final DigitButton b1 = new DigitButton(1);
 		digitButton1.setOnAction(e -> calc.press(b1));
-		DigitButton b2 = new DigitButton(2);
+		final DigitButton b2 = new DigitButton(2);
 		digitButton2.setOnAction(e -> calc.press(b2));
-		DigitButton b3 = new DigitButton(3);
+		final DigitButton b3 = new DigitButton(3);
 		digitButton3.setOnAction(e -> calc.press(b3));
-		DigitButton b4 = new DigitButton(4);
+		final DigitButton b4 = new DigitButton(4);
 		digitButton4.setOnAction(e -> calc.press(b4));
-		DigitButton b5 = new DigitButton(5);
+		final DigitButton b5 = new DigitButton(5);
 		digitButton5.setOnAction(e -> calc.press(b5));
-		DigitButton b6 = new DigitButton(6);
+		final DigitButton b6 = new DigitButton(6);
 		digitButton6.setOnAction(e -> calc.press(b6));
-		DigitButton b7 = new DigitButton(7);
+		final DigitButton b7 = new DigitButton(7);
 		digitButton7.setOnAction(e -> calc.press(b7));
-		DigitButton b8 = new DigitButton(8);
+		final DigitButton b8 = new DigitButton(8);
 		digitButton8.setOnAction(e -> calc.press(b8));
-		DigitButton b9 = new DigitButton(9);
+		final DigitButton b9 = new DigitButton(9);
 		digitButton9.setOnAction(e -> calc.press(b9));
 
-		BinaryOperationButton plus = new BinaryOperationButton("+", (x, y) -> x + y);
+		final BinaryOperationButton plus = new BinaryOperationButton("+", (x, y) -> x + y);
 		plusButton.setOnAction(e -> calc.press(plus));
-		BinaryOperationButton minus = new BinaryOperationButton("-", (x, y) -> x - y);
+		final BinaryOperationButton minus = new BinaryOperationButton("-", (x, y) -> x - y);
 		minusButton.setOnAction(e -> calc.press(minus));
 
-		ControlButton equals = new ControlButton("=", CalculatorBackend::pressEquals);
+		final ControlButton equals = new ControlButton("=", CalculatorBackend::pressEquals);
 		equalsButton.setOnAction(e -> calc.press(equals));
-		ControlButton clear = new ControlButton("C", CalculatorBackend::pressClear);
+		final ControlButton clear = new ControlButton("C", CalculatorBackend::pressClear);
 		clearButton.setOnAction(e -> calc.press(clear));
+	}
 
+	/**
+	 * Binds text which will be displayed on calculator display.
+	 *
+	 * @param calc	{@link CalculatorBackend}
+	 */
+	private void bindDisplays(final CalculatorBackend calc) {
 		displayTextField.textProperty().bind(calc.getDisplay().valueProperty().asString());
 		registersTextField.textProperty().bind(
 				new SimpleStringProperty("D:")

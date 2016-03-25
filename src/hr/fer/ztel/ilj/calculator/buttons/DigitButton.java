@@ -5,25 +5,26 @@ import hr.fer.ztel.ilj.calculator.CalculatorBackend;
 /**
  * Class which represents a button with digits on calculator.
  *
- * @author Formula1
+ * @author Boris Generalic
  *
  */
 public class DigitButton extends Button {
 
-	private int number;
+	/** Number which this buttons stands for. */
+	private final int number;
 
 	/**
 	 * Creates a new button with given digit on it.
 	 *
 	 * @param number	digit to represent
 	 */
-	public DigitButton(int number) {
+	public DigitButton(final int number) {
 		super(Integer.toString(number));
 		this.number = number;
 	}
 
 	@Override
-	public void execute(CalculatorBackend logicUnit) {
-		logicUnit.pressDigit(number);
+	public void execute(final CalculatorBackend calc) {
+		calc.pressDigit(number);
 	}
 }

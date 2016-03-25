@@ -6,7 +6,7 @@ import javafx.beans.property.SimpleObjectProperty;
 /**
  * Class which represents a register, used for saving values, in calculator.
  *
- * @author generalic
+ * @author Boris Generalic
  *
  */
 public class Register<T> {
@@ -17,7 +17,7 @@ public class Register<T> {
 		this(null);
 	}
 
-	public Register(T value) {
+	public Register(final T value) {
 		super();
 		this.value = new SimpleObjectProperty<>(value);
 	}
@@ -41,16 +41,20 @@ public class Register<T> {
 	 *
 	 * @param value	value to store
 	 */
-	public void setValue(T value) {
+	public void setValue(final T value) {
 		this.value.set(value);
 	}
 
 	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
+	public boolean equals(final Object o) {
+		if (this == o) {
+			return true;
+		}
+		if (o == null || getClass() != o.getClass()) {
+			return false;
+		}
 
-		Register<?> register = (Register<?>) o;
+		final Register<?> register = (Register<?>) o;
 
 		return value != null ? value.equals(register.value) : register.value == null;
 
