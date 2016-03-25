@@ -31,8 +31,8 @@ public class ControlButton extends Button {
 	}
 
 	@Override
-	public void execute(final CalculatorBackend calc) {
-		consumer.accept(calc);
+	public void execute(final CalculatorBackend logicUnit) {
+		consumer.accept(logicUnit);
 	}
 
 }
