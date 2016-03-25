@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?scenebuilder-background-color 0x9f9f9fff?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="start.CalculatorController">
+   <children>
+      <VBox layoutX="200.0" layoutY="86.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TextField fx:id="displayTextField" alignment="CENTER_RIGHT" editable="false" focusTraversable="false" prefHeight="65.0" prefWidth="600.0" promptText="Welcome">
+               <font>
+                  <Font name="Arial" size="40.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></TextField>
+            <TextField fx:id="registersTextField" focusTraversable="false">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin></TextField>
+            <AnchorPane prefHeight="316.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <GridPane alignment="CENTER" hgap="5.0" prefHeight="199.0" prefWidth="590.0" vgap="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <AnchorPane>
+                           <children>
+                              <Button fx:id="digitButton7" alignment="CENTER" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="7" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Arial" size="32.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="1">
+                           <children>
+                              <Button fx:id="digitButton8" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Arial" size="32.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.rowIndex="1">
+                           <children>
+                              <Button fx:id="digitButton4" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font size="32.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.rowIndex="2">
+                           <children>
+                              <Button fx:id="digitButton1" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="1" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Arial" size="32.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="2">
+                           <children>
+                              <Button fx:id="digitButton9" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="9" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Arial" size="32.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="3">
+                           <children>
+                              <Button fx:id="clearButton" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="C" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Arial" size="32.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Button fx:id="digitButton5" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="5" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Arial" size="32.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <Button fx:id="digitButton6" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="6" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Arial" size="32.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <children>
+                              <Button fx:id="plusButton" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="+" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Arial" size="32.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <Button fx:id="digitButton2" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="2" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Arial" size="32.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <Button fx:id="digitButton3" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="3" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Arial" size="32.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <children>
+                              <Button fx:id="minusButton" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="-" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Arial" size="32.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <Button fx:id="digitButton0" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Arial" size="32.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <children>
+                              <Button fx:id="equalsButton" focusTraversable="false" mnemonicParsing="false" prefHeight="25.0" prefWidth="206.0" text="=" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <font>
+                                    <Font name="Arial" size="32.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                     <opaqueInsets>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </opaqueInsets>
+                  </GridPane>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </AnchorPane>
+         </children>
+         <opaqueInsets>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </opaqueInsets>
+      </VBox>
+   </children>
+</AnchorPane>
