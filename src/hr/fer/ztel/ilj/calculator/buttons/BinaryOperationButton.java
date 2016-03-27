@@ -1,8 +1,8 @@
 package hr.fer.ztel.ilj.calculator.buttons;
 
-import java.util.function.IntBinaryOperator;
-
 import hr.fer.ztel.ilj.calculator.CalculatorBackend;
+
+import java.util.function.IntBinaryOperator;
 
 /**
  * Class which represents binary operation button of the calculator.

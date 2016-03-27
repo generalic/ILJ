@@ -1,13 +1,13 @@
 package hr.fer.ztel.ilj.calculator;
 
-import java.util.Objects;
-import java.util.function.IntBinaryOperator;
-
 import hr.fer.ztel.ilj.calculator.buttons.BinaryOperationButton;
 import hr.fer.ztel.ilj.calculator.buttons.Button;
 import hr.fer.ztel.ilj.calculator.buttons.ControlButton;
 import hr.fer.ztel.ilj.calculator.buttons.DigitButton;
 import hr.fer.ztel.ilj.calculator.register.Register;
+
+import java.util.Objects;
+import java.util.function.IntBinaryOperator;
 
 /**
  * Class which represents backend logic of the calculator.
@@ -79,6 +79,7 @@ public class CalculatorBackend {
 	public void pressDigit(final int digit) {
 		if(nextNumber) {
 			display.setValue(0);
+			nextNumber = false;
 		}
 		display.setValue(buildNewNumber(digit));
 	}
@@ -90,8 +91,9 @@ public class CalculatorBackend {
 	 * @return	a * 10 + b(two digit number)
 	 */
 	private int buildNewNumber(final int b) {
-		final int a = display.getValue();
-		return a * 10 + b;
+		final double a = display.getValue();
+		double result = a * 10 + b;
+		return result > Integer.MAX_VALUE ? (int) a : (int) result;
 	}
 
 	/**
